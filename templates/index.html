@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/static/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&family=Oleo+Script:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Passion+One:wght@400;700;900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Iansui&family=Kadwa:wght@400;700&family=Oleo+Script:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Passion+One:wght@400;700;900&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+        <script>
+            function showFlashMessage(message) {
+                alert(message);
+            }
+        </script>
+    <div class="body">
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <script>
+                {% for message in messages %}
+                    showFlashMessage("{{ message }}");
+                {% endfor %}
+            </script>
+        {% endif %}
+    {% endwith %}
+    <h1 id="title" class="display-3 fw-bold tracking-in-contract-bck "><span style="color:#f21616;">Type</span> Master</h1>
+    <div class="content">
+        <div class="welcome">
+            <h2 id="subtitle">Welcome!</h2>
+            <p class="p1">Boost your speed and master the keyboard effortlessly!</p>
+            <p class="p2">Type Master - your ultimate typing practice companion. Improve your speed and accuracy with engaging exercises designed to enhance your skills. Whether you're a beginner or an expert, Type Master helps you level up your typing efficiency in a fun and interactive way.</p>
+            <div class="box">
+            <div class="carousel-container">
+                <div id="textCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <p><span class="topic-title">Master Typing, Effortlessly!</span><br>Enhance your typing speed and accuracy with engaging exercises and real-time feedback. Practice daily and watch your productivity soar!</p>
+                        </div>
+    
+                        <div class="carousel-item">
+                            <p><span class="topic-title">Type Faster, Work Smarter</span><br>Sharpen your keyboard skills with interactive lessons and speed tests. Achieve precision and efficiency with every keystroke!</p>
+                        </div>
+    
+                        <div class="carousel-item">
+                            <p><span class="topic-title">Precision Meets Speed</span><br>Transform the way you type with dynamic practice sessions. Track your progress and become a typing pro with minimal time!</p>
+                        </div>
+    
+    
+                    </div>
+    
+    
+                    <button class="carousel-control-prev" type="button" data-bs-target="#textCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#textCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="form-container">
+            <form action="/" method="post" class="form">
+                <p class="form-title">Get Started</p>
+                <div class="input-container">
+                    <input name="email" type="email" placeholder="Enter email" required>
+                    <span>
+                    </span>
+                </div>
+                <div class="input-container">
+                    <input name="password" type="password" placeholder="Enter password" required>
+                </div>
+                <button type="submit" class="submit">
+                    SignIn/SignUp
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

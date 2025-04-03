@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/dashboard.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src='https://cdn.jotfor.ms/s/umd/latest/for-embedded-agent.js'></script>
+    <script src='https://cdn.jotfor.ms/s/umd/latest/for-embedded-agent.js'></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", function () {
+            window.AgentInitializer.init({
+                agentRenderURL: "https://agent.jotform.com/0195c286daa573ba9aa4cf77a44091d4cd89",
+                rootId: "JotformAgent-0195c286daa573ba9aa4cf77a44091d4cd89",
+                formID: "0195c286daa573ba9aa4cf77a44091d4cd89",
+                queryParams: ["skipWelcome=1", "maximizable=1"],
+                domain: "https://www.jotform.com",
+                isDraggable: false,
+                background: "linear-gradient(180deg, #6C73A8 0%, #6C73A8 100%)",
+                buttonBackgroundColor: "#0066C3",
+                buttonIconColor: "#FFFFFF",
+                variant: false,
+                customizations: {
+                    "greeting": "Yes",
+                    "greetingMessage": "Hi! How can I assist you?",
+                    "openByDefault": "No",
+                    "pulse": "Yes",
+                    "position": "right",
+                    "autoOpenChatIn": "0"
+                },
+                isVoice: undefined
+            });
+        });
+    </script>
+
+    <h1 id="title" class="display-4 fw-bold tracking-in-contract-bck "><span style="color:#f21616;">Type</span> Master
+    </h1>
+
+    <div id="button-space">
+        <button class="logout"><a href="{{url_for('index')}}">Logout</a></button>
+        <button class="Leaderboard"><a href="{{url_for('leaderboard')}}">Leaderboard</a></button>
+    </div>
+    <div class="page-options">
+        <div class="card">
+            <div><img class="image" src="/static/type-practice.jpg" alt=""></div>
+            <div class="content">
+                <a href="#">
+                    <span class="title">
+                        Start your typing practice now with Type Master
+                    </span>
+                </a>
+
+                <p class="desc">
+                    Improve your typing speed and accuracy with regular practice. Strengthen muscle memory, reduce
+                    errors, and enhance efficiency in digital communication. Track your progress and build a smooth,
+                    effortless typing flow.
+                </p>
+
+                <a class="action" href="{{url_for('start_test')}}">
+                    Start Typing
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

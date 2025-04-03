@@ -1,0 +1,131 @@
+#title {
+    margin: 0px;
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+    color: #f2c641;
+    font-size: 40px;
+    width: 100%;
+    z-index: 5;
+}
+
+.page-options {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    max-width: 500px;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid transparent;
+}
+
+.card a {
+    text-decoration: none
+}
+
+.content {
+    padding: 1.1rem;
+}
+
+.image {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+}
+
+.title {
+    color: #111827;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+}
+
+.desc {
+    margin-top: 0.5rem;
+    color: #6B7280;
+    font-size: 16px;
+}
+
+.action {
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    align-items: center;
+    background-color: #f2c641;
+    padding: 4px 8px;
+    border-radius: 4px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.action:hover
+{
+    opacity: 0.9;
+}
+
+#button-space>button>a {
+    all: unset;
+}
+
+#button-space>button {
+    color: white;
+    padding: 5px;
+    font-size: larger;
+    font-weight: bold;
+    margin-left: 30px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+}
+#button-space>button:hover
+{
+    opacity: 0.8;
+}
+.Leaderboard
+{
+    background-color:rgb(64, 145, 232);
+    width: 150px;
+}
+
+.logout
+{
+    background-color: #f21616;
+    width: 150px;
+}
+
+#button-space {
+    margin-top: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: left;
+}
+
+@media (max-width: 1300px) {
+    body * {
+        display: none !important;
+    }
+    
+    html::before {
+        content: "This website is only accessible on large screens.\A\A Try using large screens \A or\A Try Zooming out (Ctrl + -)";
+        display: block;
+        text-align: center;
+        font-size: 24px;
+        color: red;
+        padding: 20px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        white-space: pre-wrap;
+    }
+}

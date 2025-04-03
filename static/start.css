@@ -1,0 +1,155 @@
+body {
+  background-color: #f2f2f2;
+}
+
+#words {
+  display: block;
+  font-size: 18px;
+  text-align: justify;
+}
+
+
+#title {
+  margin: 0px;
+  text-align: center;
+  padding: 10px;
+  background-color: black;
+  color: #f2c641;
+  font-size: 40px;
+  width: 100%;
+  z-index: 5;
+}
+
+.input-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#timer {
+  background-color: black;
+  color: white;
+  margin-left: 20px;
+  width: 80px;
+  font-size: 25px;
+  text-align: center;
+  padding: 5px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#typing-box {
+  height: 50px;
+  width: 500px;
+  font-size: 25px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+div.word {
+  display: inline-block;
+  margin: 1px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 2px;
+}
+
+div#game {
+  margin-top: 100px;
+  line-height: 36px;
+  height: 215px;
+  width: 1000px;
+  overflow: hidden;
+  border: black solid 3px;
+  padding: 5px;
+}
+
+#game.over #words {
+  opacity: 0.5;
+}
+
+.current {
+
+  background-color: rgb(227, 226, 226);
+}
+
+.correct {
+  color: green;
+}
+
+.wrong {
+  color: red;
+}
+
+#refresh {
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+  background-color: black;
+}
+
+#refresh-container {
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  margin-left: 20px;
+  background-color: black;
+}
+
+#refresh-container:hover,
+#refresh:hover {
+  background-color: rgb(48, 38, 38);
+}
+
+#button-space>button>a {
+  all: unset;
+}
+
+#button-space>button {
+  color: white;
+  background-color: #f21616;
+  padding: 5px;
+  font-size: larger;
+  font-weight: bold;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  width: 150px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#button-space {
+  margin-top: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: right;
+}
+
+@media (max-width: 1300px) {
+  body * {
+      display: none !important;
+  }
+  
+  html::before {
+      content: "This website is only accessible on large screens.\A\A Try using large screens \A or\A Try Zooming out (Ctrl + -)";
+      display: block;
+      text-align: center;
+      font-size: 24px;
+      color: red;
+      padding: 20px;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      white-space: pre-wrap;
+  }
+}
