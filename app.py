@@ -1,5 +1,4 @@
 import sqlitecloud
-import mysql.connector as sc
 from flask import Flask, render_template, request, flash, redirect, url_for,jsonify,session
 app = Flask(__name__)
 app.secret_key="dhinesh_typing_app"
