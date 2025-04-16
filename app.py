@@ -4,8 +4,9 @@ from flask import Flask, render_template, request, flash, redirect, url_for,json
 app = Flask(__name__)
 app.secret_key="dhinesh_typing_app"
 
-#con=sqlitecloud.connect("sqlitecloud://cvwila88sk.g5.sqlite.cloud:8860/type?apikey=cxhqnmn4jWRfmDVBbGZKsgPRLCP7iB389Mg2Swl2q9c")
-con=sc.connect(host='localhost',username='root',password='root',database='dhinesh')
+con_url="sqlitecloud://cvwila88sk.g5.sqlite.cloud:8860/type?apikey=cxhqnmn4jWRfmDVBbGZKsgPRLCP7iB389Mg2Swl2q9c"
+con=sqlitecloud.connect(con_url)
+
 
 @app.route("/",methods=['POST','GET'])
 def index():
@@ -15,12 +16,12 @@ def index():
         session['email']=email
         password=request.form.get('password')
         cursor=con.cursor()
-        q1="Select * from users where email=%s"
-        q2="Insert into users values(%s,%s)"
+        q1="Select * from users where email=?"
+        q2="Insert into users values(?,?)"
         cursor.execute(q1,(email,))
         data=cursor.fetchall()
         cursor.close()
-        print("data : ",data)
+
         if data:
             if password==data[0][1]:
                 return render_template("dashboard.html",email=session.get('email',''))
@@ -58,7 +59,7 @@ def receive_data():
 def gameover_page():
     game_stats = session.get('game_stats', {})
     cursor=con.cursor()
-    q1="insert into type(email,accuracy,error,total_typed,total_wrong,wpm) values(%s,%s,%s,%s,%s,%s)"
+    q1="insert into type(email,accuracy,error,total_typed,total_wrong,wpm) values(?,?,?,?,?,?)"
     wpm=game_stats.get('wpm', 0)
     accuracy=game_stats.get('accuracy', 0)
     error=game_stats.get('errorRate', 0)
